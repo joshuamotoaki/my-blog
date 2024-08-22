@@ -92,11 +92,12 @@ const posts = (await getCollection("blog")).sort(
             <section>
                 <ul>
                     {
-                        posts.map(post => (
+                        posts.map((post, i) => (
                             <li>
                                 <a href={`/blog/${post.slug}/`}>
                                     {post.data.heroImage !== undefined && (
                                         <Image
+                                            loading={i < 5 ? "eager" : "lazy"}
                                             src={post.data.heroImage}
                                             alt={post.data.title}
                                             width="720"
