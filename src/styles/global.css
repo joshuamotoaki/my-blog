@@ -46,19 +46,19 @@ h6 {
     line-height: 1.2;
 }
 h1 {
-    font-size: 3.052em;
+    font-size: 2.8em;
 }
 h2 {
-    font-size: 2.441em;
+    font-size: 2.4em;
 }
 h3 {
-    font-size: 1.953em;
+    font-size: 1.9em;
 }
 h4 {
-    font-size: 1.563em;
+    font-size: 1.5em;
 }
 h5 {
-    font-size: 1.25em;
+    font-size: 1.25m;
 }
 strong,
 b {
@@ -72,6 +72,7 @@ a:hover {
 }
 p {
     margin-bottom: 1em;
+    font-size: 0.9em;
 }
 .prose p {
     margin-bottom: 2em;
@@ -87,7 +88,8 @@ table {
     width: 100%;
 }
 img {
-    max-width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
     height: auto;
     border-radius: 8px;
 }
