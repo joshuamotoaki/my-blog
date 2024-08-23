@@ -1,6 +1,6 @@
 ---
 import Image from "astro/components/Image.astro";
-import AboutImage from "../assets/about.png"
+import AboutImage from "../assets/about.png";
 import Layout from "../layouts/BlogPost.astro";
 ---
 
@@ -8,7 +8,7 @@ import Layout from "../layouts/BlogPost.astro";
     title="About Me"
     description="A little bit about me :)"
     pubDate={new Date("August 20 2024")}
-    heroImage="/about.png">
+    heroImage="/placeholder.jpg">
     <p>
         Hi! I'm Joshua Motoaki Lau, a software engineer and 3rd year electrical
         engineering student at Princeton University. I'm passionate about
@@ -35,8 +35,5 @@ import Layout from "../layouts/BlogPost.astro";
         languages; I speak English, German, and some Spanish and am currently
         learning Japanese. I sometimes dabble in food criticism.
     </p>
-    <Image
-    src={AboutImage}
-    alt="A photo of me in front of a lake"
-/>
+    <Image src={AboutImage} alt="A photo of me in front of a lake" />
 </Layout>
