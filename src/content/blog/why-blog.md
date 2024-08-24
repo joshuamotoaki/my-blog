@@ -1,12 +1,9 @@
 ---
 title: "Why I'm Starting a Blog"
-description: "Description"
+description: "There's a million great computer science blogs out there, so why am I starting one?"
 pubDate: "Aug 13, 2024"
 heroImage: "/posts/why-blog.jpg"
 ---
-
-There's a million great computer science blogs out there, so why am
-I starting one?
 
 #### The Joy of Sharing
 

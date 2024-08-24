@@ -1,6 +1,6 @@
 ---
 title: "Human-Centered Spaced Repetition"
-description: "A new approach to spaced repetition that I use to learn in a friendlier way."
+description: "A friendlier approach to efficiently studying flashcards."
 pubDate: "Aug 23, 2024"
 heroImage: "/posts/spaced-repetition-advisor.jpg"
 ---
@@ -25,8 +25,8 @@ several reasons:
 
 #### It locks you into a rigid schedule
 
-This kind of rigigity discourages breaks, which have been shown to be
-neccesary to prevent burnout and increase study efficiency.
+This kind of rigidity discourages breaks, which have been shown to be
+necessary to prevent burnout and increase study efficiency.
 
 Studying a ton on one day forces you to keep up a consistently high
 level of motivation on subsequent days.
@@ -35,19 +35,19 @@ level of motivation on subsequent days.
 
 Most spaced repetition algorithms (like the popular <a href="https://github.com/open-spaced-repetition/fsrs4anki/wiki/ABC-of-FSRS" target=_blank>FSRS</a> algorithm
 used by Anki), require users to manually input their confidence level after
-reviewing each card (for example, easy, medium, or hard). While this improves the algorithm's ability to accuractely schedule cards, it forces
+reviewing each card (for example, easy, medium, or hard). While this improves the algorithm's ability to accurately schedule cards, it forces
 users to constantly stop and think, instead of focusing only on recalling
 information for the flashcards.
 
 Furthermore, user interpretation of the difficulty levels can greatly vary.
-Even the judgements of a single user can vary over time (I don't remember
+Even the judgement of a single user can vary over time (I don't remember
 what an "easy" card felt like a week ago).
 
 ### The Spaced Repetition Advisor
 
 The underlying principle behind spaced repetition -- that
 studying at spaced intervals is effective for long-term memory -- is
-still extremely valuable. How then, can that principle be incoporated into
+still extremely valuable. How then, can that principle be incorporated into
 a more human-centered design that takes into account the aforementioned
 pitfalls?
 
