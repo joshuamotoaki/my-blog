@@ -30,7 +30,7 @@ to finish, explaining the challenges I've felt, the mistakes I've made,
 and the lessons I've learned along the way. While every programmer
 and project is different, I think that by reading about the experiences
 of someone else, beginners may better understand _a path_ that
-exists to coding and publishing applications. 
+exists to coding and publishing applications.
 
 #### My Love for Education
 
