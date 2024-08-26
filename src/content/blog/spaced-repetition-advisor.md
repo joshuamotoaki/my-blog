@@ -88,3 +88,5 @@ algorithms. The advisor is not groundbreaking (it shares most of the principles 
 If you'd like to try out using a spaced repetition advisor, I created a
 <a href="https://github.com/joshuamotoaki/gen-cards" target="_blank">prototype application</a> for personal use. It's completely free and runs locally on your computer. Eventually, I plan on streamlining this application to make it much
 more suitable for general use.
+
+_If you're interested in reading more about the process of building a custom flashcard app, see <a href="https://motoaki.dev/blog/flashcard-app/">this post</a>._
