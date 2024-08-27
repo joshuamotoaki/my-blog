@@ -7,6 +7,8 @@ heroImage: "/posts/gencards.png"
 
 Recently, I built a flashcard application which implements an original spaced-repetition-based system. This post outlines the rapid prototyping of the app.
 
+<img src="/posts/gencards-logo.png" alt="edit page" width="80%">
+
 ### Why?
 
 Honestly, I've wanted to build a flashcard app for years. When I first started programming a couple years ago, I was in the process of learning German. I was inspired by <a href="https://conjuguemos.com/" target="_blank">Conjuguemos</a>, an app I had used in middle school Spanish to memorize vocabulary, to create a flashcard app that made the user type the answer, as opposed to traditional flashcard apps where you manually enter whether you knew the card or not. Some apps like Quizlet had this feature, but I wanted a solution that ran locally so I could use it without internet (or a premium fee). I had attempted to build the application with extremely little programming knowledge and ultimately gave up.
@@ -53,15 +55,17 @@ After a full day trying to fix this issue, I considered building my own SQLite p
 
 #### Scaffolding
 
-With that issue solved, I was ready to dive into the bread and butter of the project. A huge thing I've learned from previous projects is to separate different layers of the application. For example, I have a module for the code that interacts directly with the database, a module that handles deck metadata, and a module that does the actual logic while studying flashcards. In Svelte, I do this by extended stores (which provide global state) with custom functions to interact with the state. A lot of this actually resembles object-oriented programming (perhaps Java really is the best). 
+With that issue solved, I was ready to dive into the bread and butter of the project. A huge thing I've learned from previous projects is to separate different layers of the application. For example, I have a module for the code that interacts directly with the database, a module that handles deck metadata, and a module that does the actual logic while studying flashcards. In Svelte, I do this by extended stores (which provide global state) with custom functions to interact with the state. A lot of this actually resembles object-oriented programming (perhaps Java really is the best).
 
 This part actually went pretty straightforward. TypeScript is super helpful in making sure that the data types are correct, and a few unit tests catch errors before they build up too much.
 
 #### User Interface Work
 
-One of the most tedious parts of frontend development is developing the user interface. Nothing too out-of-the-ordinary happened on this project -- with the exception of having to clear some of the defaults of WebKit (Apple's web view framework) so that SkeletonUI could look good. 
+One of the most tedious parts of frontend development is developing the user interface. Nothing too out-of-the-ordinary happened on this project -- with the exception of having to clear some of the defaults of WebKit (Apple's web view framework) so that SkeletonUI could look good.
 
-Some of the most important work is on things that aren't often considered at face value. For example, when you edit cards, you want to be able to keep on tabbing on the inputs to get to future cards. Normally, this would tab over buttons like the priority star and the delete button, so tabindex is set manually on these elements to skip over them. Furthermore, a nice feature I added (that other flashcard apps also do) is to add a new card to the deck when the last input of the last card is tabbed out of. This allows the user to continually input new cards without having to move off the keyboard. 
+<img src="/posts/gencards.png" alt="edit page" width="80%">
+
+Some of the most important work is on things that aren't often considered at face value. For example, when you edit cards, you want to be able to keep on tabbing on the inputs to get to future cards. Normally, this would tab over buttons like the priority star and the delete button, so tabindex is set manually on these elements to skip over them. Furthermore, a nice feature I added (that other flashcard apps also do) is to add a new card to the deck when the last input of the last card is tabbed out of. This allows the user to continually input new cards without having to move off the keyboard.
 
 <img src="/posts/gencards-edit.png" alt="edit page" width="80%">
 
@@ -74,6 +78,8 @@ Even though the database is on the same machine (so there's no network delays), 
 Another optimization came from fetching the cards from the database. When you first load into the app, to keep load times fast, only the metadata for each deck is loaded. Then, when a deck is clicked on, the cards were fetched. While this normally felt fine, for decks with thousands of cards, there would be a slight delay. I solved this by **caching** the cards when the button to click on a deck was hovered over, as well as the 6 most recent decks asynchronously after loading the app.
 
 On the UI-side of things, when a JS framework like Svelte has a lot of items to render to the page, whether or not they are visible, the page load can be slow. There are 2 main strategies for dealing with this. The first is **virtualization**, a system where items are not rendered until they are in or near the viewport. An issue with virtualization is that you need to explicitly know the heights of items, and while this was possible, there would have been a lot of moving parts.
+
+<img src="/posts/gencards-pagination.png" alt="edit page" width="80%">
 
 The second strategy -- the one I went with -- is **pagination**, where there's buttons to exchange the items that are on the page. Fortunately, Skeleton had a prebuilt component for pagination, so it was a very quick addition that led to a lot of performance gains.
 
