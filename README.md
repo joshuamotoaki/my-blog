@@ -6,7 +6,7 @@ Hi there! This is the codebase for my blog about education, engineering, and com
 
 <!-- BLOG-POST-LIST:START -->
 - [Human-Centered Spaced Repetition](https://motoaki.dev/blog/spaced-repetition-advisor/)
-- [Building a Custom Desktop Flashcard App in 1 Week](https://motoaki.dev/blog/gen-cards/)
+- [Rapid Prototyping a Custom Desktop Flashcard App](https://motoaki.dev/blog/flashcard-app/)
 - [Why I&#39;m Starting a Blog](https://motoaki.dev/blog/why-blog/)
 <!-- BLOG-POST-LIST:END -->
 
